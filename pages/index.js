@@ -105,7 +105,17 @@ const Index = props => {
                                             <Media heading>
                                             <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>item: </small>
                                             {data.Item} 
-                                            <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> {data['UsageRate%']}
+                                            <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate over: </small>
+                                            {
+                                                data['QDemand'] === '0.01' ?
+                                                <>
+                                                    {'Over Budget'}
+                                                </>
+                                                :
+                                                <>
+                                                    {data['UsageRate%']}
+                                                </>
+                                            }
                                             </Badge>
                                             </Media>
 
@@ -137,7 +147,17 @@ const Index = props => {
                                                     <Media heading>
                                                     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>item: </small>
                                                     {data.Item} 
-                                                    <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> {data['UsageRate%']}
+                                                    <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> 
+                                                    {
+                                                        data['QDemand'] === '0.01' ?
+                                                        <>
+                                                            {'Over Budget'}
+                                                        </>
+                                                        :
+                                                        <>
+                                                            {data['UsageRate%']}
+                                                        </>
+                                                    }
                                                     </Badge>
                                                     </Media>
 
@@ -165,7 +185,17 @@ const Index = props => {
                                                     <Media heading>
                                                     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>item: </small>
                                                     {data.Item} 
-                                                    <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> {data['UsageRate%']}
+                                                    <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> 
+                                                    {
+                                                        data['QDemand'] === '0.01' ?
+                                                        <>
+                                                            {'Over Budget'}
+                                                        </>
+                                                        :
+                                                        <>
+                                                            {data['UsageRate%']}
+                                                        </>
+                                                    }
                                                     </Badge>
                                                     </Media>
 
@@ -193,6 +223,7 @@ const Index = props => {
                     <div style={{
                         marginTop: 28
                     }}>
+                        <h4 style={{fontWeight: 400, marginBottom: 28}}>Top Over Consumption Rates</h4>
                         <ListGroup>
                             {props.data.summary.map(data => (
                                 <ListGroupItem key={data.RANKING} >{data.ToolGrp} <Badge pill>{data.Count}</Badge></ListGroupItem>
