@@ -109,7 +109,7 @@ const Index = props => {
                                             {
                                                 data['QDemand'] === '0.01' ?
                                                 <>
-                                                    {'Over Budget'}
+                                                    {'> 500%'}
                                                 </>
                                                 :
                                                 <>
@@ -119,7 +119,7 @@ const Index = props => {
                                             </Badge>
                                             </Media>
 
-                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                            <Badge style={{marginLeft: 40, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                             <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                             
@@ -151,7 +151,7 @@ const Index = props => {
                                                     {
                                                         data['QDemand'] === '0.01' ?
                                                         <>
-                                                            {'Over Budget'}
+                                                            {'> 500%'}
                                                         </>
                                                         :
                                                         <>
@@ -161,7 +161,7 @@ const Index = props => {
                                                     </Badge>
                                                     </Media>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                    <Badge style={{marginLeft: 40, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
@@ -189,7 +189,7 @@ const Index = props => {
                                                     {
                                                         data['QDemand'] === '0.01' ?
                                                         <>
-                                                            {'Over Budget'}
+                                                            {'> 500%'}
                                                         </>
                                                         :
                                                         <>
@@ -199,7 +199,7 @@ const Index = props => {
                                                     </Badge>
                                                     </Media>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                    <Badge style={{marginLeft: 40, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
