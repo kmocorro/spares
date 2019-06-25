@@ -67,7 +67,7 @@ const Index = props => {
 
     return (
         <Layout>
-        <Container>
+        <Container style={{overflow: `auto`}}>
             <Row>
                 <Col md={{ size: 3, order: 1}}>
                     <div style={{
