@@ -109,7 +109,7 @@ const Index = props => {
                                             {
                                                 data['QDemand'] === '0.01' ?
                                                 <>
-                                                    {'> 500%'}
+                                                    {'No Forecast'}
                                                 </>
                                                 :
                                                 <>
@@ -151,7 +151,7 @@ const Index = props => {
                                                     {
                                                         data['QDemand'] === '0.01' ?
                                                         <>
-                                                            {'> 500%'}
+                                                            {'No Forecast'}
                                                         </>
                                                         :
                                                         <>
@@ -189,7 +189,7 @@ const Index = props => {
                                                     {
                                                         data['QDemand'] === '0.01' ?
                                                         <>
-                                                            {'> 500%'}
+                                                            {'No Forecast'}
                                                         </>
                                                         :
                                                         <>
