@@ -105,7 +105,7 @@ const Index = props => {
                                             <Media heading>
                                             <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>item: </small>
                                             {data.Item} 
-                                            <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate over: </small>
+                                            <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small>
                                             {
                                                 data['QDemand'] === '0.01' ?
                                                 <>
@@ -119,7 +119,7 @@ const Index = props => {
                                             </Badge>
                                             </Media>
 
-                                            <Badge style={{marginLeft: 40, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                            <Badge style={{marginLeft: 80, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                             <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                             
@@ -161,7 +161,7 @@ const Index = props => {
                                                     </Badge>
                                                     </Media>
 
-                                                    <Badge style={{marginLeft: 40, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                    <Badge style={{marginLeft: 80, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
@@ -199,7 +199,7 @@ const Index = props => {
                                                     </Badge>
                                                     </Media>
 
-                                                    <Badge style={{marginLeft: 40, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                    <Badge style={{marginLeft: 80, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
