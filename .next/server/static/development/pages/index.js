@@ -1225,6 +1225,11 @@ var Index = function Index(props) {
   var unique_category = ['All'].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_4__["default"])(new _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_3___default.a(props.data.details.map(function (data) {
     return data.Category;
   }))));
+
+  var unique_WW = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_4__["default"])(new _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_3___default.a(props.data.details.map(function (data) {
+    return data.WW;
+  })));
+
   var select_category = useFilterCategory(null);
 
   function useFilterCategory(init) {
@@ -1301,19 +1306,22 @@ var Index = function Index(props) {
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 71
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Container"], {
+    style: {
+      overflow: "auto"
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 72
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 73
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
@@ -1323,7 +1331,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 74
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -1332,7 +1340,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 75
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["FormGroup"], {
@@ -1340,21 +1348,21 @@ var Index = function Index(props) {
     row: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 78
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("legend", {
     className: "col-form-label col-sm-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 79
     },
     __self: this
   }, "Select Category"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
     sm: 10,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 80
     },
     __self: this
   }, unique_category.map(function (category) {
@@ -1363,14 +1371,14 @@ var Index = function Index(props) {
       check: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 83
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Label"], {
       check: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 84
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Input"], {
@@ -1380,14 +1388,14 @@ var Index = function Index(props) {
       name: "rad",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 85
       },
       __self: this
     }), ' ', category));
   }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["ListGroup"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 94
     },
     __self: this
   }, props.data.summary.map(function (data) {
@@ -1395,14 +1403,14 @@ var Index = function Index(props) {
       key: data.RANKING,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 96
       },
       __self: this
     }, data.ToolGrp, " ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 96
       },
       __self: this
     }, data.Count));
@@ -1413,7 +1421,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 101
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -1422,30 +1430,40 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
     style: {
-      fontWeight: 300,
+      fontWeight: 400,
       marginBottom: 28
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 105
     },
     __self: this
-  }, "Overconsumption ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+  }, "Dashboard ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
     style: {
       opacity: 0.5,
       fontSize: 14
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 105
     },
     __self: this
-  }, "o\xB7ver\xB7con\xB7sump\xB7tion /\u02CC\u014Dv\u0259rk\u0259n\u02C8s\u0259mpSHn/")), !select_category.value ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, props.data.details.map(function (data) {
+  }, "o\xB7ver\xB7con\xB7sump\xB7tion"), " ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+    style: {
+      float: "right",
+      opacity: 0.5
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: this
+  }, " ", unique_WW)), !select_category.value ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, props.data.details.map(function (data) {
     return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
       key: data.RANK,
       style: {
@@ -1458,7 +1476,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 111
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1466,7 +1484,7 @@ var Index = function Index(props) {
       href: "#",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 110
+        lineNumber: 112
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1481,21 +1499,21 @@ var Index = function Index(props) {
       alt: "Generic placeholder image",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 113
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
       body: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 115
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
       heading: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 116
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1506,7 +1524,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 117
       },
       __self: this
     }, "item: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1518,7 +1536,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 119
       },
       __self: this
     }, "     ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1529,7 +1547,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 119
       },
       __self: this
     }, "usage rate: "), " ", data['UsageRate%'])), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1540,7 +1558,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 123
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1551,32 +1569,10 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 121
+        lineNumber: 123
       },
       __self: this
     }, "@"), " ", data.ToolGrp), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-      color: "light",
-      pill: true,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 123
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-      style: {
-        fontWeight: 400,
-        fontSize: 14,
-        opacity: 0.5
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 123
-      },
-      __self: this
-    }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-      style: {
-        float: "right"
-      },
       color: "light",
       pill: true,
       __source: {
@@ -1592,7 +1588,29 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 125
+      },
+      __self: this
+    }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+      style: {
+        float: "right"
+      },
+      color: "light",
+      pill: true,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 127
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+      style: {
+        fontWeight: 400,
+        fontSize: 14,
+        opacity: 0.5
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 128
       },
       __self: this
     }, "demand: "), " ", data['QDemand']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1603,7 +1621,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 131
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1614,7 +1632,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 131
       },
       __self: this
     }, "consumption: "), " ", data['QCons']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1625,7 +1643,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 133
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1636,7 +1654,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 133
       },
       __self: this
     }, "category: "), " ", data.Category)));
@@ -1654,7 +1672,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 143
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1662,7 +1680,7 @@ var Index = function Index(props) {
         href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 144
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1677,21 +1695,21 @@ var Index = function Index(props) {
         alt: "Generic placeholder image",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 145
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
         body: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 147
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
         heading: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 148
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1702,7 +1720,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 149
         },
         __self: this
       }, "item: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1714,7 +1732,7 @@ var Index = function Index(props) {
         pill: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 151
         },
         __self: this
       }, "     ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1725,7 +1743,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 151
         },
         __self: this
       }, "usage rate: "), " ", data['UsageRate%'])), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1736,7 +1754,7 @@ var Index = function Index(props) {
         pill: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 155
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1747,32 +1765,10 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 155
         },
         __self: this
       }, "@"), " ", data.ToolGrp), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 155
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 155
-        },
-        __self: this
-      }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
         color: "light",
         pill: true,
         __source: {
@@ -1788,7 +1784,29 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 157
+        },
+        __self: this
+      }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 159
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 160
         },
         __self: this
       }, "demand: "), " ", data['QDemand']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1799,7 +1817,7 @@ var Index = function Index(props) {
         pill: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 163
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1810,7 +1828,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 163
         },
         __self: this
       }, "consumption: "), " ", data['QCons']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1821,7 +1839,7 @@ var Index = function Index(props) {
         pill: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 165
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1832,7 +1850,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 165
         },
         __self: this
       }, "category: "), " ", data.Category)));
@@ -1849,7 +1867,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169
+          lineNumber: 171
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1857,7 +1875,7 @@ var Index = function Index(props) {
         href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 170
+          lineNumber: 172
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1872,21 +1890,21 @@ var Index = function Index(props) {
         alt: "Generic placeholder image",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171
+          lineNumber: 173
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
         body: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 173
+          lineNumber: 175
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
         heading: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174
+          lineNumber: 176
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1897,7 +1915,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175
+          lineNumber: 177
         },
         __self: this
       }, "item: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1909,7 +1927,7 @@ var Index = function Index(props) {
         pill: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 179
         },
         __self: this
       }, "     ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1920,7 +1938,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 179
         },
         __self: this
       }, "usage rate: "), " ", data['UsageRate%'])), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1931,7 +1949,7 @@ var Index = function Index(props) {
         pill: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 183
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1942,32 +1960,10 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 183
         },
         __self: this
       }, "@"), " ", data.ToolGrp), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 183
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 183
-        },
-        __self: this
-      }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
         color: "light",
         pill: true,
         __source: {
@@ -1983,7 +1979,29 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186
+          lineNumber: 185
+        },
+        __self: this
+      }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 187
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 188
         },
         __self: this
       }, "demand: "), " ", data['QDemand']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1994,7 +2012,7 @@ var Index = function Index(props) {
         pill: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 191
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -2005,7 +2023,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 191
         },
         __self: this
       }, "consumption: "), " ", data['QCons']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -2016,7 +2034,7 @@ var Index = function Index(props) {
         pill: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 193
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -2027,7 +2045,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 193
         },
         __self: this
       }, "category: "), " ", data.Category)));

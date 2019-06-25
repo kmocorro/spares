@@ -12,6 +12,8 @@ const Index = props => {
     
     // find unique category
     const unique_category = ['All', ...new Set(props.data.details.map(data => data.Category))];
+    const unique_WW = [...new Set(props.data.details.map(data => data.WW))];
+
     const select_category = useFilterCategory(null);
 
     function useFilterCategory(init){
@@ -100,7 +102,7 @@ const Index = props => {
                     <div style={{
                         marginTop: 28
                     }}>
-                        <h2 style={{fontWeight: 300, marginBottom: 28}}>Overconsumption <small style={{opacity: 0.5, fontSize: 14}}>o·ver·con·sump·tion /ˌōvərkənˈsəmpSHn/</small></h2>
+                        <h2 style={{fontWeight: 400, marginBottom: 28}}>Dashboard <small style={{opacity: 0.5, fontSize: 14}}>o·ver·con·sump·tion</small> <span style={{float: `right`, opacity: 0.5}}> {unique_WW}</span></h2>
                         {
                             !select_category.value 
                             ? 
