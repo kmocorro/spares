@@ -37,7 +37,8 @@ const Index = props => {
             <Row>
                 <Col md={{ size: 3, order: 1}}>
                     <div style={{
-                        marginTop: 28
+                        marginTop: 28,
+                        position: `fixed`,
                     }}>
                         <FormGroup tag="fieldset" row>
                         <legend className="col-form-label col-sm-12">Select Category</legend>
