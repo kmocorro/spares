@@ -8,21 +8,19 @@ import fetch from 'isomorphic-unfetch';
 
 const Index = props => {
 
-    // find unique category
+    // find unique category, ww, toolgroup
     const unique_category = ['All', ...new Set(props.data.details.map(data => data.Category))];
-    // find unique workweek
     const unique_WW = [...new Set(props.data.details.map(data => data.WW))];
+    const unique_toolgrp = ['All', ...new Set(props.data.details.map(data => data.ToolGrp))];
 
-    // filtering category
-    const select_category = useFilterCategory(null);
+    const filter = useFilter(null);
 
-    // function to filter category -- Hook
-    function useFilterCategory(init){
+    function useFilter(init){
         const [value, setValue] = useState(init);
 
         function handleOnChange(e){
-            const selected_category_id = e.target.id;
-            setValue(selected_category_id);
+            const selected_filter = e.target.id;
+            setValue(selected_filter);
         }
         
         return {
@@ -46,31 +44,56 @@ const Index = props => {
                             <Col sm={10}>
                                 {
                                     unique_category.map(category => (
-                                    <FormGroup  key={category} check>
-                                        <Label check>
-                                            <Input id={category} type="radio" onChange={select_category.onChange} name="rad" />{' '}
-                                            {category}
-                                        </Label>
-                                    </FormGroup>
+                                        category === 'All' ?
+                                        <FormGroup  key={category} check>
+                                            <Label check>
+                                                <Input id={category} type="radio" onChange={filter.onChange} name="rad" />{' '}
+                                                {category}
+                                            </Label>
+                                        </FormGroup>
+                                        :
+                                        <FormGroup  key={category} check>
+                                            <Label check>
+                                                <Input id={category} type="radio" onChange={filter.onChange} name="rad" />{' '}
+                                                {category}
+                                            </Label>
+                                        </FormGroup>
                                     ))
                                 }
-                                
                             </Col>
                         </FormGroup>
-                        <ListGroup>
-                            {props.data.summary.map(data => (
-                                <ListGroupItem key={data.RANKING} >{data.ToolGrp} <Badge pill>{data.Count}</Badge></ListGroupItem>
-                            ))}
-                        </ListGroup>
+                        <FormGroup tag="fieldset" row>
+                        <legend className="col-form-label col-sm-12">Select Tool Group</legend>
+                            <Col sm={10}>
+                                {
+                                    unique_toolgrp.map(toolgrp => (
+                                        toolgrp === 'All' ?
+                                        <FormGroup  key={toolgrp} check>
+                                            <Label check>
+                                                <Input id={toolgrp} type="radio" onChange={filter.onChange} name="rad" />{' '}
+                                                {toolgrp}
+                                            </Label>
+                                        </FormGroup>
+                                        :
+                                        <FormGroup  key={toolgrp} check>
+                                            <Label check>
+                                                <Input id={toolgrp} type="radio" onChange={filter.onChange} name="rad" />{' '}
+                                                {toolgrp}
+                                            </Label>
+                                        </FormGroup>
+                                    ))
+                                }
+                            </Col>
+                        </FormGroup>
                     </div>
                 </Col>
-                <Col md={{ size: 9, order: 2 }}>
+                <Col md={{ size: 6, order: 2 }}>
                     <div style={{
                         marginTop: 28
                     }}>
                         <h2 style={{fontWeight: 400, marginBottom: 28}}>Dashboard <small style={{opacity: 0.5, fontSize: 14}}>o·ver·con·sump·tion</small> <span style={{float: `right`, opacity: 0.5}}> {unique_WW}</span></h2>
                         {
-                            !select_category.value 
+                            !filter.value 
                             ? 
                                 <>
                                 {props.data.details.map(data => (
@@ -104,7 +127,7 @@ const Index = props => {
                             :
                                 <>
                                 {props.data.details.map(function(data, i) {
-                                    if(data.Category == select_category.value){
+                                    if(data.Category === filter.value || data.ToolGrp === filter.value){
                                         return (
                                             <Media key={data.RANK} style={{borderLeft: `1px solid #00000020`, borderRight: `1px solid #00000020`, borderTop: `1px solid #00000020`, borderBottom: `1px solid #00000020`, padding: `20px`, marginBottom: 4 }}>
                                                 <Media left href="#">
@@ -132,7 +155,7 @@ const Index = props => {
                                                 </Media>
                                             </Media>
                                         )
-                                    } else if(select_category.value == 'All') {
+                                    } else if(filter.value === 'All') {
                                         return (
                                             <Media key={data.RANK} style={{borderLeft: `1px solid #00000020`, borderRight: `1px solid #00000020`, borderTop: `1px solid #00000020`, borderBottom: `1px solid #00000020`, padding: `20px`, marginBottom: 4 }}>
                                                 <Media left href="#">
@@ -164,6 +187,17 @@ const Index = props => {
                                 })}
                                 </>
                         }
+                    </div>
+                </Col>
+                <Col md={{ size: 3, order: 3}}>
+                    <div style={{
+                        marginTop: 28
+                    }}>
+                        <ListGroup>
+                            {props.data.summary.map(data => (
+                                <ListGroupItem key={data.RANKING} >{data.ToolGrp} <Badge pill>{data.Count}</Badge></ListGroupItem>
+                            ))}
+                        </ListGroup>
                     </div>
                 </Col>
             </Row>
