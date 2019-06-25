@@ -8,61 +8,27 @@ import fetch from 'isomorphic-unfetch';
 
 const Index = props => {
 
-    const ranking = useRankingCollapse({collapse: false, status: 'View Spares Details >>'});
-    
     // find unique category
     const unique_category = ['All', ...new Set(props.data.details.map(data => data.Category))];
+    // find unique workweek
     const unique_WW = [...new Set(props.data.details.map(data => data.WW))];
 
+    // filtering category
     const select_category = useFilterCategory(null);
 
+    // function to filter category -- Hook
     function useFilterCategory(init){
         const [value, setValue] = useState(init);
 
         function handleOnChange(e){
             const selected_category_id = e.target.id;
             setValue(selected_category_id);
-            console.log(selected_category_id);
         }
         
         return {
             value,
             onChange: handleOnChange
         }
-    }
-
-    function useRankingCollapse(init){
-        const [value, setValue] = useState(init);
-
-        function handleOnEntering(){
-            setValue({collapse: true, status: 'Opening...' });
-        }
-
-        function handleOnEntered(){
-            setValue({collapse: true, status: 'Hide' });
-        }
-
-        function handleOnExiting(){
-            setValue({collapse: false, status: 'Closing...' });
-        }
-        
-        function handleOnExited(){
-            setValue({collapse: false, status: 'View Spares Details >>' });
-        }
-
-        function handleOnToggle(){
-            setValue(value => ({ collapse: !value.collapse }))
-        }
-        
-        return {
-            value,
-            onEntering: handleOnEntering,
-            onEntered: handleOnEntered,
-            onExiting: handleOnExiting, 
-            onExited: handleOnExited,
-            onToggle: handleOnToggle
-        }
-        
     }
 
     console.log(props.data);
@@ -211,7 +177,7 @@ Index.getInitialProps = async function(){
     const res = await fetch('http://dev-metaspf401.sunpowercorp.com:8080/api/spares');
     const data = await res.json();
 
-    console.log(`Show data fetched. Count: ${data.summary.length}`);
+    //console.log(`Show data fetched. Count: ${data.summary.length}`);
 
     return {
         data

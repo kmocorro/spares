@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 
 import {
+    Container,
     Collapse,
     Navbar,
     NavbarToggler,
@@ -37,8 +38,8 @@ export default () => {
     }
 
     return (
-        <div>
-            <Navbar color="dark" dark expand="md" >
+        <Navbar color="dark" dark expand="md" style={{padding: `auto`}}>
+            <Container>
                 <NavbarBrand href="/">Fab4 Spares</NavbarBrand>
                 <NavbarToggler onClick={isOpen.onClick} />
                 <Collapse isOpen={isOpen.value} navbar>
@@ -68,8 +69,8 @@ export default () => {
                     </UncontrolledDropdown>
                     </Nav>
                 </Collapse>
-            </Navbar>
-        </div>
+            </Container>
+        </Navbar>
     )
 
 }

@@ -140,33 +140,36 @@ var _jsxFileName = "/Users/kmocorro/App/spares/components/Header.js";
     };
   }
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Navbar"], {
     color: "dark",
     dark: true,
     expand: "md",
+    style: {
+      padding: "auto"
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Container"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavbarBrand"], {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, "Fab4 Spares"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavbarToggler"], {
     onClick: isOpen.onClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Collapse"], {
@@ -174,7 +177,7 @@ var _jsxFileName = "/Users/kmocorro/App/spares/components/Header.js";
     navbar: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Nav"], {
@@ -182,33 +185,33 @@ var _jsxFileName = "/Users/kmocorro/App/spares/components/Header.js";
     navbar: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: this
   }, "Request")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["NavLink"], {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   }, "Approval ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Badge"], {
@@ -216,7 +219,7 @@ var _jsxFileName = "/Users/kmocorro/App/spares/components/Header.js";
     pill: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   }, "516"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["UncontrolledDropdown"], {
@@ -224,7 +227,7 @@ var _jsxFileName = "/Users/kmocorro/App/spares/components/Header.js";
     inNavbar: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["DropdownToggle"], {
@@ -232,39 +235,39 @@ var _jsxFileName = "/Users/kmocorro/App/spares/components/Header.js";
     caret: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }, "Profile"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["DropdownMenu"], {
     right: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["DropdownItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }, "Notifications"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["DropdownItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 61
     },
     __self: this
   }, "Settings"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["DropdownItem"], {
     divider: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["DropdownItem"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   }, "Logout")))))));
@@ -1217,20 +1220,17 @@ var _jsxFileName = "/Users/kmocorro/App/spares/pages/index.js";
 
 
 var Index = function Index(props) {
-  var ranking = useRankingCollapse({
-    collapse: false,
-    status: 'View Spares Details >>'
-  }); // find unique category
-
+  // find unique category
   var unique_category = ['All'].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_4__["default"])(new _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_3___default.a(props.data.details.map(function (data) {
     return data.Category;
-  }))));
+  })))); // find unique workweek
 
   var unique_WW = Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_4__["default"])(new _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_3___default.a(props.data.details.map(function (data) {
     return data.WW;
-  })));
+  }))); // filtering category
 
-  var select_category = useFilterCategory(null);
+
+  var select_category = useFilterCategory(null); // function to filter category -- Hook
 
   function useFilterCategory(init) {
     var _useState = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(init),
@@ -1241,7 +1241,6 @@ var Index = function Index(props) {
     function handleOnChange(e) {
       var selected_category_id = e.target.id;
       setValue(selected_category_id);
-      console.log(selected_category_id);
     }
 
     return {
@@ -1250,63 +1249,11 @@ var Index = function Index(props) {
     };
   }
 
-  function useRankingCollapse(init) {
-    var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_5__["useState"])(init),
-        _useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_useState3, 2),
-        value = _useState4[0],
-        setValue = _useState4[1];
-
-    function handleOnEntering() {
-      setValue({
-        collapse: true,
-        status: 'Opening...'
-      });
-    }
-
-    function handleOnEntered() {
-      setValue({
-        collapse: true,
-        status: 'Hide'
-      });
-    }
-
-    function handleOnExiting() {
-      setValue({
-        collapse: false,
-        status: 'Closing...'
-      });
-    }
-
-    function handleOnExited() {
-      setValue({
-        collapse: false,
-        status: 'View Spares Details >>'
-      });
-    }
-
-    function handleOnToggle() {
-      setValue(function (value) {
-        return {
-          collapse: !value.collapse
-        };
-      });
-    }
-
-    return {
-      value: value,
-      onEntering: handleOnEntering,
-      onEntered: handleOnEntered,
-      onExiting: handleOnExiting,
-      onExited: handleOnExited,
-      onToggle: handleOnToggle
-    };
-  }
-
   console.log(props.data);
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Container"], {
@@ -1315,13 +1262,13 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 39
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
@@ -1331,7 +1278,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 40
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -1340,7 +1287,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 41
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["FormGroup"], {
@@ -1348,21 +1295,21 @@ var Index = function Index(props) {
     row: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 44
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("legend", {
     className: "col-form-label col-sm-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 45
     },
     __self: this
   }, "Select Category"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
     sm: 10,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 46
     },
     __self: this
   }, unique_category.map(function (category) {
@@ -1371,14 +1318,14 @@ var Index = function Index(props) {
       check: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 49
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Label"], {
       check: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 50
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Input"], {
@@ -1388,14 +1335,14 @@ var Index = function Index(props) {
       name: "rad",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 85
+        lineNumber: 51
       },
       __self: this
     }), ' ', category));
   }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["ListGroup"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 60
     },
     __self: this
   }, props.data.summary.map(function (data) {
@@ -1403,14 +1350,14 @@ var Index = function Index(props) {
       key: data.RANKING,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 62
       },
       __self: this
     }, data.ToolGrp, " ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 62
       },
       __self: this
     }, data.Count));
@@ -1421,7 +1368,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
@@ -1430,7 +1377,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 68
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
@@ -1440,7 +1387,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 71
     },
     __self: this
   }, "Dashboard ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1450,7 +1397,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 71
     },
     __self: this
   }, "o\xB7ver\xB7con\xB7sump\xB7tion"), " ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
@@ -1460,7 +1407,7 @@ var Index = function Index(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 71
     },
     __self: this
   }, " ", unique_WW)), !select_category.value ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, props.data.details.map(function (data) {
@@ -1476,7 +1423,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 77
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1484,7 +1431,7 @@ var Index = function Index(props) {
       href: "#",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 78
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1499,21 +1446,21 @@ var Index = function Index(props) {
       alt: "Generic placeholder image",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 79
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
       body: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 115
+        lineNumber: 81
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
       heading: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 116
+        lineNumber: 82
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1524,7 +1471,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 83
       },
       __self: this
     }, "item: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1536,7 +1483,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 85
       },
       __self: this
     }, "     ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1547,7 +1494,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 119
+        lineNumber: 85
       },
       __self: this
     }, "usage rate: "), " ", data['UsageRate%'])), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1558,7 +1505,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123
+        lineNumber: 89
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1569,7 +1516,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123
+        lineNumber: 89
       },
       __self: this
     }, "@"), " ", data.ToolGrp), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1577,7 +1524,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 91
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1588,7 +1535,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 91
       },
       __self: this
     }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1599,7 +1546,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 93
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1610,7 +1557,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 128
+        lineNumber: 94
       },
       __self: this
     }, "demand: "), " ", data['QDemand']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1621,7 +1568,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 97
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1632,7 +1579,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 97
       },
       __self: this
     }, "consumption: "), " ", data['QCons']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
@@ -1643,7 +1590,7 @@ var Index = function Index(props) {
       pill: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
+        lineNumber: 99
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1654,7 +1601,7 @@ var Index = function Index(props) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133
+        lineNumber: 99
       },
       __self: this
     }, "category: "), " ", data.Category)));
@@ -1672,7 +1619,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 109
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1680,7 +1627,7 @@ var Index = function Index(props) {
         href: "#",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 110
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
@@ -1695,21 +1642,261 @@ var Index = function Index(props) {
         alt: "Generic placeholder image",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 111
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
         body: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 113
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
         heading: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 114
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 115
+        },
+        __self: this
+      }, "item: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        id: data.Item,
+        style: {
+          float: "right"
+        },
+        color: "danger",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117
+        },
+        __self: this
+      }, "     ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117
+        },
+        __self: this
+      }, "usage rate: "), " ", data['UsageRate%'])), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 121
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 121
+        },
+        __self: this
+      }, "@"), " ", data.ToolGrp), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 125
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }, "demand: "), " ", data['QDemand']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 129
+        },
+        __self: this
+      }, "consumption: "), " ", data['QCons']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131
+        },
+        __self: this
+      }, "category: "), " ", data.Category)));
+    } else if (select_category.value == 'All') {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
+        key: data.RANK,
+        style: {
+          borderLeft: "1px solid #00000020",
+          borderRight: "1px solid #00000020",
+          borderTop: "1px solid #00000020",
+          borderBottom: "1px solid #00000020",
+          padding: "20px",
+          marginBottom: 4
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 137
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
+        left: true,
+        href: "#",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 138
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
+        style: {
+          width: 80,
+          height: 80,
+          borderRadius: "50%",
+          marginRight: 10
+        },
+        object: true,
+        src: "http://dev-metaspf401.sunpowercorp.com:8080/images/spares/".concat(data.ToolOwnerImage),
+        alt: "Generic placeholder image",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 139
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
+        body: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 141
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
+        heading: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 143
+        },
+        __self: this
+      }, "item: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        id: data.Item,
+        style: {
+          float: "right"
+        },
+        color: "danger",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145
+        },
+        __self: this
+      }, "     ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145
+        },
+        __self: this
+      }, "usage rate: "), " ", data['UsageRate%'])), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 149
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
@@ -1723,56 +1910,55 @@ var Index = function Index(props) {
           lineNumber: 149
         },
         __self: this
-      }, "item: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        id: data.Item,
-        style: {
-          float: "right"
-        },
-        color: "danger",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 151
-        },
-        __self: this
-      }, "     ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 151
-        },
-        __self: this
-      }, "usage rate: "), " ", data['UsageRate%'])), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 155
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 155
-        },
-        __self: this
       }, "@"), " ", data.ToolGrp), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
         color: "light",
         pill: true,
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 151
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 151
+        },
+        __self: this
+      }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 153
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+        style: {
+          fontWeight: 400,
+          fontSize: 14,
+          opacity: 0.5
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 154
+        },
+        __self: this
+      }, "demand: "), " ", data['QDemand']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+        style: {
+          float: "right"
+        },
+        color: "light",
+        pill: true,
+        __source: {
+          fileName: _jsxFileName,
           lineNumber: 157
         },
         __self: this
@@ -1787,7 +1973,7 @@ var Index = function Index(props) {
           lineNumber: 157
         },
         __self: this
-      }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+      }, "consumption: "), " ", data['QCons']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
         style: {
           float: "right"
         },
@@ -1806,246 +1992,7 @@ var Index = function Index(props) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
-        },
-        __self: this
-      }, "demand: "), " ", data['QDemand']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 163
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 163
-        },
-        __self: this
-      }, "consumption: "), " ", data['QCons']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 165
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 165
-        },
-        __self: this
-      }, "category: "), " ", data.Category)));
-    } else if (select_category.value == 'All') {
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
-        key: data.RANK,
-        style: {
-          borderLeft: "1px solid #00000020",
-          borderRight: "1px solid #00000020",
-          borderTop: "1px solid #00000020",
-          borderBottom: "1px solid #00000020",
-          padding: "20px",
-          marginBottom: 4
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 171
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
-        left: true,
-        href: "#",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 172
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
-        style: {
-          width: 80,
-          height: 80,
-          borderRadius: "50%",
-          marginRight: 10
-        },
-        object: true,
-        src: "http://dev-metaspf401.sunpowercorp.com:8080/images/spares/".concat(data.ToolOwnerImage),
-        alt: "Generic placeholder image",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 173
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
-        body: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 175
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
-        heading: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 176
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 177
-        },
-        __self: this
-      }, "item: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        id: data.Item,
-        style: {
-          float: "right"
-        },
-        color: "danger",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 179
-        },
-        __self: this
-      }, "     ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 179
-        },
-        __self: this
-      }, "usage rate: "), " ", data['UsageRate%'])), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 183
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 183
-        },
-        __self: this
-      }, "@"), " ", data.ToolGrp), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 185
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 185
-        },
-        __self: this
-      }, "description: "), data.Desc), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 187
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 188
-        },
-        __self: this
-      }, "demand: "), " ", data['QDemand']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 191
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 191
-        },
-        __self: this
-      }, "consumption: "), " ", data['QCons']), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
-        style: {
-          float: "right"
-        },
-        color: "light",
-        pill: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 193
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
-        style: {
-          fontWeight: 400,
-          fontSize: 14,
-          opacity: 0.5
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 193
+          lineNumber: 159
         },
         __self: this
       }, "category: "), " ", data.Category)));
@@ -2073,12 +2020,11 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
         case 5:
           data = _context.sent;
-          console.log("Show data fetched. Count: ".concat(data.summary.length));
           return _context.abrupt("return", {
             data: data
           });
 
-        case 8:
+        case 7:
         case "end":
           return _context.stop();
       }
