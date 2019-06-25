@@ -29,7 +29,7 @@ const Index = props => {
         }
     }
 
-    console.log(props.data);
+    //console.log(props.data);
 
     return (
         <Layout>
@@ -124,7 +124,19 @@ const Index = props => {
                                             <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                             
                                             <Badge style={{float:`right`}} color="light" pill >
-                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {data['QDemand']}
+                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> 
+                                            {   
+                                                data['QDemand'] === '0.01' ?
+                                                <>
+                                                    {'0'}
+                                                </>
+                                                :
+                                                <>
+                                                {
+                                                    data['QDemand']
+                                                }
+                                                </>
+                                            }
                                             </Badge>
                                             
                                             <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
@@ -166,7 +178,18 @@ const Index = props => {
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
                                                     <Badge style={{float:`right`}} color="light" pill >
-                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {data['QDemand']}
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
+                                                        data['QDemand'] === '0.01' ?
+                                                        <>
+                                                            {'0'}
+                                                        </>
+                                                        :
+                                                        <>
+                                                        {
+                                                            data['QDemand']
+                                                        }
+                                                        </>
+                                                    }
                                                     </Badge>
                                                     
                                                     <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
@@ -204,7 +227,18 @@ const Index = props => {
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
                                                     <Badge style={{float:`right`}} color="light" pill >
-                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {data['QDemand']}
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
+                                                        data['QDemand'] === '0.01' ?
+                                                        <>
+                                                            {'0'}
+                                                        </>
+                                                        :
+                                                        <>
+                                                        {
+                                                            data['QDemand']
+                                                        }
+                                                        </>
+                                                    }
                                                     </Badge>
                                                     
                                                     <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
