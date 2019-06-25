@@ -100,7 +100,7 @@ const Index = props => {
                     <div style={{
                         marginTop: 28
                     }}>
-                        <h2 style={{fontWeight: 300, marginBottom: 48}}>Overconsumption</h2>
+                        <h2 style={{fontWeight: 300, marginBottom: 28}}>Overconsumption <small style={{opacity: 0.5, fontSize: 14}}>o·ver·con·sump·tion /ˌōvərkənˈsəmpSHn/</small></h2>
                         {
                             !select_category.value 
                             ? 

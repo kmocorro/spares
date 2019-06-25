@@ -47,7 +47,7 @@ export default () => {
                         <NavLink href="#">Request</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="#">Approval <Badge color="danger" pill>25</Badge></NavLink>
+                        <NavLink href="#">Approval <Badge color="danger" pill>516</Badge></NavLink>
                     </NavItem>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>

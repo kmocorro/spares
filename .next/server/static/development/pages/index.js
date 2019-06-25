@@ -219,7 +219,7 @@ var _jsxFileName = "/Users/kmocorro/App/spares/components/Header.js";
       lineNumber: 50
     },
     __self: this
-  }, "25"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["UncontrolledDropdown"], {
+  }, "516"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["UncontrolledDropdown"], {
     nav: true,
     inNavbar: true,
     __source: {
@@ -1428,14 +1428,24 @@ var Index = function Index(props) {
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
     style: {
       fontWeight: 300,
-      marginBottom: 48
+      marginBottom: 28
     },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 103
     },
     __self: this
-  }, "Overconsumption"), !select_category.value ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, props.data.details.map(function (data) {
+  }, "Overconsumption ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
+    style: {
+      opacity: 0.5,
+      fontSize: 14
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 103
+    },
+    __self: this
+  }, "o\xB7ver\xB7con\xB7sump\xB7tion /\u02CC\u014Dv\u0259rk\u0259n\u02C8s\u0259mpSHn/")), !select_category.value ? react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, props.data.details.map(function (data) {
     return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Media"], {
       key: data.RANK,
       style: {
