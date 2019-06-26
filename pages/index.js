@@ -154,37 +154,43 @@ const Index = props => {
                                             }
                                             </Badge>
                                             </Media>
+                                            <Media body>
 
-                                            <Badge style={{marginLeft: 200, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
-                                            <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
-                                            
-                                            <Badge style={{float:`right`}} color="light" pill >
-                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> 
-                                            {   
-                                                data['QDemand'] === '0.01' ?
-                                                <>
-                                                    {'0'}
-                                                </>
-                                                :
-                                                <>
-                                                {
-                                                    data['QDemand']
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
+                                                
+                                            </Media>
+                                            <Media body>
+                                                <Badge color="light" pill >
+                                                <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
+                                                    data['QDemand'] === '0.01' ?
+                                                    <>
+                                                        {'0'}
+                                                    </>
+                                                    :
+                                                    <>
+                                                    {
+                                                        data['QDemand']
+                                                    }
+                                                    </>
                                                 }
-                                                </>
-                                            }
-                                            </Badge>
+                                                </Badge>
+                                                
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
+
+                                                <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+
+                                            </Media>
+                                            <Media body>
                                             
-                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
+                                                <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
 
-                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
 
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
 
-                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
-
-                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
-
-                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+                                            </Media>
                                         </Media>
                                     </Media>
                                 ))}
@@ -216,11 +222,15 @@ const Index = props => {
                                                     </Badge>
                                                     </Media>
 
-                                                    <Badge style={{marginLeft: 200, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                <Media body>
+
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
-                                                    <Badge style={{float:`right`}} color="light" pill >
+                                                </Media>
+                                                <Media body>
+                                                    <Badge color="light" pill >
                                                     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
                                                         data['QDemand'] === '0.01' ?
                                                         <>
@@ -235,15 +245,57 @@ const Index = props => {
                                                     }
                                                     </Badge>
                                                     
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+                                                    <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+                                                </Media>
+                                                <Media body>
+                                                
+                                                    <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+
+                                                </Media>
+                                                <Media body>
+
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
+                                                    
+                                                </Media>
+                                                <Media body>
+                                                    <Badge color="light" pill >
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
+                                                        data['QDemand'] === '0.01' ?
+                                                        <>
+                                                            {'0'}
+                                                        </>
+                                                        :
+                                                        <>
+                                                        {
+                                                            data['QDemand']
+                                                        }
+                                                        </>
+                                                    }
+                                                    </Badge>
+                                                    
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
+
+                                                    <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+
+                                                </Media>
+                                                <Media body>
+                                                
+                                                    <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+
+                                                </Media>
                                                 </Media>
                                             </Media>
                                         )
@@ -270,12 +322,16 @@ const Index = props => {
                                                     }
                                                     </Badge>
                                                     </Media>
+                                                </Media>
+                                                <Media body>
 
-                                                    <Badge style={{marginLeft: 200, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
-                                                    <Badge style={{float:`right`}} color="light" pill >
+                                                </Media>
+                                                <Media body>
+                                                    <Badge color="light" pill >
                                                     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
                                                         data['QDemand'] === '0.01' ?
                                                         <>
@@ -290,15 +346,19 @@ const Index = props => {
                                                     }
                                                     </Badge>
                                                     
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+                                                    <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+                                                </Media>
+                                                <Media body>
+                                                
+                                                    <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
 
-                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+                                                    <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+
                                                 </Media>
                                             </Media>
                                         )
