@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
 
-import { Container, Row, Col, Media, Collapse, Button, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Badge, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Container, Row, Col, Media, ListGroup, ListGroupItem, Badge, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon } from 'reactstrap';
 
 import fetch from 'isomorphic-unfetch';
 
@@ -15,12 +15,33 @@ const Index = props => {
 
     const filter = useFilter(null);
 
+    const search = useSearch(null);
+
+    function useSearch(init){
+        const [ value, setValue ] = useState(init);
+
+        function handleOnChange(e){
+            setValue(e.target.value);
+        }
+
+        function handleOnClickClear(){
+            setValue('');
+        }
+
+        return {
+            value,
+            onChange: handleOnChange,
+            onClick: handleOnClickClear
+        }
+    }
+
     function useFilter(init){
         const [value, setValue] = useState(init);
 
         function handleOnChange(e){
             const selected_filter = e.target.id;
             setValue(selected_filter);
+            
         }
         
         return {
@@ -40,6 +61,24 @@ const Index = props => {
                         marginTop: 28,
                         position: `fixed`,
                     }}>
+                        <FormGroup tag="fieldset" row>
+                        <legend className="col-form-label col-sm-12">Search Item Number:</legend>
+                            <InputGroup>
+                                <InputGroupAddon addonType="prepend">#:</InputGroupAddon>
+                                <Input autoFocus value={search.value} onClick={search.onClick} onChange={search.onChange} />
+                                {
+                                    !search.value
+                                    ?
+                                       <>
+                                       </>
+                                    : 
+                                    <InputGroupAddon addonType="append">
+                                    <Button color="danger" onClick={search.onClick}>x</Button>
+                                    </InputGroupAddon> 
+                                }
+                            </InputGroup>
+
+                        </FormGroup>
                         <FormGroup tag="fieldset" row>
                         <legend className="col-form-label col-sm-12">Select Category</legend>
                             <Col sm={10}>
@@ -94,7 +133,7 @@ const Index = props => {
                     }}>
                         <h2 style={{fontWeight: 400, marginBottom: 28}}>Dashboard <small style={{opacity: 0.5, fontSize: 14}}>o·ver·con·sump·tion</small> <span style={{float: `right`, opacity: 0.5}}> {unique_WW}</span></h2>
                         {
-                            !filter.value 
+                            !filter.value && !search.value
                             ? 
                                 <>
                                 {props.data.details.map(data => (
@@ -104,7 +143,7 @@ const Index = props => {
                                         </Media>
                                         <Media body>
                                             <Media heading>
-                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>item: </small>
+                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#: </small>
                                             {data.Item} 
                                             <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small>
                                             {
@@ -157,7 +196,7 @@ const Index = props => {
                             :
                                 <>
                                 {props.data.details.map(function(data, i) {
-                                    if(data.Category === filter.value || data.ToolGrp === filter.value){
+                                    if(data.Category === filter.value || data.ToolGrp === filter.value || data.Item === search.value){
                                         return (
                                             <Media key={data.RANK} style={{borderLeft: `1px solid #00000020`, borderRight: `1px solid #00000020`, borderTop: `1px solid #00000020`, borderBottom: `1px solid #00000020`, padding: `20px`, marginBottom: 4 }}>
                                                 <Media left href="#">
@@ -165,7 +204,7 @@ const Index = props => {
                                                 </Media>
                                                 <Media body>
                                                     <Media heading>
-                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>item: </small>
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#: </small>
                                                     {data.Item} 
                                                     <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> 
                                                     {
@@ -220,7 +259,7 @@ const Index = props => {
                                                 </Media>
                                                 <Media body>
                                                     <Media heading>
-                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>item: </small>
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#: </small>
                                                     {data.Item} 
                                                     <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> 
                                                     {
