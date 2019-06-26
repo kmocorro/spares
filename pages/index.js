@@ -60,10 +60,9 @@ const Index = props => {
                     <div style={{
                         marginTop: 28,
                     }}>
-                        <legend className="col-form-label col-sm-12">Search Item Number:</legend>
                         <InputGroup>
                             <InputGroupAddon addonType="prepend">#</InputGroupAddon>
-                            <Input autoFocus value={search.value} onClick={search.onClick} onChange={search.onChange} />
+                            <Input autoFocus value={search.value} placeholder="Search item number..." onClick={search.onClick} onChange={search.onChange} />
                                 {
                                     !search.value
                                     ?
@@ -127,7 +126,7 @@ const Index = props => {
                     <div style={{
                         marginTop: 28
                     }}>
-                        <h2 style={{fontWeight: 400, marginBottom: 28}}>Dashboard <small style={{opacity: 0.5, fontSize: 14}}>o·ver·con·sump·tion</small> <span style={{float: `right`, opacity: 0.5}}> {unique_WW}</span></h2>
+                        <h2 style={{fontWeight: 400, marginBottom: 28}}>Dashboard <small style={{opacity: 0.5, fontSize: 14}}>o·ver·con·sump·tion</small> <span style={{float: `right`, opacity: 0.8}}> {unique_WW}</span></h2>
                         {
                             !filter.value && !search.value
                             ? 
@@ -139,9 +138,9 @@ const Index = props => {
                                         </Media>
                                         <Media body>
                                             <Media heading>
-                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#</small>
+                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>#</small>
                                             {data.Item} 
-                                            <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small>
+                                            <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>usage rate: </small>
                                             {
                                                 data['QDemand'] === '0.01' ?
                                                 <>
@@ -156,14 +155,14 @@ const Index = props => {
                                             </Media>
                                             <Media body>
 
-                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>@</small>{data.ToolGrp}</Badge>
 
-                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>description: </small>{data.Desc}</Badge> 
                                                 
                                             </Media>
                                             <Media body>
                                                 <Badge color="light" pill >
-                                                <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
+                                                <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>demand: </small> {   
                                                     data['QDemand'] === '0.01' ?
                                                     <>
                                                         {'0'}
@@ -177,18 +176,18 @@ const Index = props => {
                                                 }
                                                 </Badge>
                                                 
-                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>consumption: </small> {data['QCons']}</Badge>
 
-                                                <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+                                                <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>category: </small> {data.Category}</Badge>
 
                                             </Media>
                                             <Media body>
                                             
-                                                <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+                                                <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>on-hand: </small> {data.OnHand}</Badge>
 
-                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>open-po: </small> {data.OpenPO}</Badge>
 
-                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+                                                <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>in-transit: </small> {data.InTransit}</Badge>
 
                                             </Media>
                                         </Media>
@@ -206,9 +205,9 @@ const Index = props => {
                                                 </Media>
                                                 <Media body>
                                                     <Media heading>
-                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#</small>
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>#</small>
                                                     {data.Item} 
-                                                    <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> 
+                                                    <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>usage rate: </small> 
                                                     {
                                                         data['QDemand'] === '0.01' ?
                                                         <>
@@ -224,14 +223,14 @@ const Index = props => {
 
                                                     <Media body>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>@</small>{data.ToolGrp}</Badge>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>description: </small>{data.Desc}</Badge> 
                                                         
                                                     </Media>
                                                     <Media body>
                                                         <Badge color="light" pill >
-                                                        <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
+                                                        <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>demand: </small> {   
                                                             data['QDemand'] === '0.01' ?
                                                             <>
                                                                 {'0'}
@@ -245,18 +244,18 @@ const Index = props => {
                                                         }
                                                         </Badge>
                                                         
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>consumption: </small> {data['QCons']}</Badge>
 
-                                                        <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+                                                        <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>category: </small> {data.Category}</Badge>
 
                                                     </Media>
                                                     <Media body>
                                                     
-                                                        <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+                                                        <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>on-hand: </small> {data.OnHand}</Badge>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>open-po: </small> {data.OpenPO}</Badge>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>in-transit: </small> {data.InTransit}</Badge>
 
                                                     </Media>
                                                 </Media>
@@ -270,9 +269,9 @@ const Index = props => {
                                                 </Media>
                                                 <Media body>
                                                     <Media heading>
-                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#</small>
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>#</small>
                                                     {data.Item} 
-                                                    <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> 
+                                                    <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>usage rate: </small> 
                                                     {
                                                         data['QDemand'] === '0.01' ?
                                                         <>
@@ -287,14 +286,14 @@ const Index = props => {
                                                     </Media>
                                                     <Media body>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>@</small>{data.ToolGrp}</Badge>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>description: </small>{data.Desc}</Badge> 
 
                                                     </Media>
                                                     <Media body>
                                                         <Badge color="light" pill >
-                                                        <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>demand: </small> {   
+                                                        <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>demand: </small> {   
                                                             data['QDemand'] === '0.01' ?
                                                             <>
                                                                 {'0'}
@@ -308,18 +307,18 @@ const Index = props => {
                                                         }
                                                         </Badge>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>consumption: </small> {data['QCons']}</Badge>
 
-                                                        <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge> 
+                                                        <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>category: </small> {data.Category}</Badge> 
 
                                                     </Media>
                                                     <Media body>
 
-                                                        <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+                                                        <Badge  color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>on-hand: </small> {data.OnHand}</Badge>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>open-po: </small> {data.OpenPO}</Badge>
 
-                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
+                                                        <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>in-transit: </small> {data.InTransit}</Badge>
 
                                                     </Media>
                                                 </Media>
@@ -335,7 +334,7 @@ const Index = props => {
                     <div style={{
                         marginTop: 28
                     }}>
-                        <h4 style={{fontWeight: 400, marginBottom: 28}}>Top Over Consumption Rates</h4>
+                        <h4 style={{fontWeight: 400, marginBottom: 28}}>Top Overconsumption Rates</h4>
                         <ListGroup>
                             {props.data.summary.map(data => (
                                 <ListGroupItem key={data.RANKING} >{data.ToolGrp} <Badge pill>{data.Count}</Badge></ListGroupItem>
