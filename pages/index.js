@@ -15,7 +15,7 @@ const Index = props => {
 
     const filter = useFilter(null);
 
-    const search = useSearch(null);
+    const search = useSearch('');
 
     function useSearch(init){
         const [ value, setValue ] = useState(init);
@@ -50,7 +50,7 @@ const Index = props => {
         }
     }
 
-    console.log(props.data);
+    //console.log(props.data);
 
     return (
         <Layout>
@@ -59,13 +59,11 @@ const Index = props => {
                 <Col md={{ size: 3, order: 1}}>
                     <div style={{
                         marginTop: 28,
-                        position: `fixed`,
                     }}>
-                        <FormGroup tag="fieldset" row>
                         <legend className="col-form-label col-sm-12">Search Item Number:</legend>
-                            <InputGroup>
-                                <InputGroupAddon addonType="prepend">#:</InputGroupAddon>
-                                <Input autoFocus value={search.value} onClick={search.onClick} onChange={search.onChange} />
+                        <InputGroup>
+                            <InputGroupAddon addonType="prepend">#:</InputGroupAddon>
+                            <Input autoFocus value={search.value} onClick={search.onClick} onChange={search.onChange} />
                                 {
                                     !search.value
                                     ?
@@ -76,9 +74,7 @@ const Index = props => {
                                     <Button color="danger" onClick={search.onClick}>x</Button>
                                     </InputGroupAddon> 
                                 }
-                            </InputGroup>
-
-                        </FormGroup>
+                        </InputGroup>
                         <FormGroup tag="fieldset" row>
                         <legend className="col-form-label col-sm-12">Select Category</legend>
                             <Col sm={10}>
