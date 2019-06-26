@@ -24689,9 +24689,9 @@ var Index = function Index(props) {
       value: value,
       onChange: handleOnChange
     };
-  }
+  } //console.log(props.data);
 
-  console.log(props.data);
+
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
@@ -24752,7 +24752,7 @@ var Index = function Index(props) {
       lineNumber: 65
     },
     __self: this
-  }, "#:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Input"], {
+  }, "#"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Input"], {
     autoFocus: true,
     value: search.value,
     onClick: search.onClick,
@@ -24770,6 +24770,7 @@ var Index = function Index(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+    outline: true,
     color: "danger",
     onClick: search.onClick,
     __source: {
@@ -25038,7 +25039,7 @@ var Index = function Index(props) {
         lineNumber: 142
       },
       __self: this
-    }, "#: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+    }, "#"), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
       id: data.Item,
       style: {
         float: "right"
@@ -25301,7 +25302,7 @@ var Index = function Index(props) {
           lineNumber: 203
         },
         __self: this
-      }, "#: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+      }, "#"), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
         id: data.Item,
         style: {
           float: "right"
@@ -25563,7 +25564,7 @@ var Index = function Index(props) {
           lineNumber: 258
         },
         __self: this
-      }, "#: "), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
+      }, "#"), data.Item, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Badge"], {
         id: data.Item,
         style: {
           float: "right"
@@ -25851,7 +25852,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!**********************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fkmocorro%2FApp%2Fspares%2Fpages%2Findex.js ***!
   \**********************************************************************************************************************/
@@ -25874,5 +25875,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

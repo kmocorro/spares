@@ -62,7 +62,7 @@ const Index = props => {
                     }}>
                         <legend className="col-form-label col-sm-12">Search Item Number:</legend>
                         <InputGroup>
-                            <InputGroupAddon addonType="prepend">#:</InputGroupAddon>
+                            <InputGroupAddon addonType="prepend">#</InputGroupAddon>
                             <Input autoFocus value={search.value} onClick={search.onClick} onChange={search.onChange} />
                                 {
                                     !search.value
@@ -71,7 +71,7 @@ const Index = props => {
                                        </>
                                     : 
                                     <InputGroupAddon addonType="append">
-                                    <Button color="danger" onClick={search.onClick}>x</Button>
+                                    <Button outline color="danger" onClick={search.onClick}>x</Button>
                                     </InputGroupAddon> 
                                 }
                         </InputGroup>
@@ -139,7 +139,7 @@ const Index = props => {
                                         </Media>
                                         <Media body>
                                             <Media heading>
-                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#: </small>
+                                            <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#</small>
                                             {data.Item} 
                                             <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small>
                                             {
@@ -200,7 +200,7 @@ const Index = props => {
                                                 </Media>
                                                 <Media body>
                                                     <Media heading>
-                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#: </small>
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#</small>
                                                     {data.Item} 
                                                     <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> 
                                                     {
@@ -255,7 +255,7 @@ const Index = props => {
                                                 </Media>
                                                 <Media body>
                                                     <Media heading>
-                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#: </small>
+                                                    <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>#</small>
                                                     {data.Item} 
                                                     <Badge id={data.Item} style={{float:`right`}} color="danger" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>usage rate: </small> 
                                                     {
