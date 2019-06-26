@@ -29,7 +29,7 @@ const Index = props => {
         }
     }
 
-    //console.log(props.data);
+    console.log(props.data);
 
     return (
         <Layout>
@@ -120,7 +120,7 @@ const Index = props => {
                                             </Badge>
                                             </Media>
 
-                                            <Badge style={{marginLeft: 80, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                            <Badge style={{marginLeft: 200, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                             <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                             
@@ -143,6 +143,13 @@ const Index = props => {
                                             <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
 
                                             <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+
+
+                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+
+                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+
+                                            <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
                                         </Media>
                                     </Media>
                                 ))}
@@ -174,7 +181,7 @@ const Index = props => {
                                                     </Badge>
                                                     </Media>
 
-                                                    <Badge style={{marginLeft: 80, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                    <Badge style={{marginLeft: 200, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
@@ -196,6 +203,12 @@ const Index = props => {
                                                     <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
 
                                                     <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+
+                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+
+                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+
+                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
                                                 </Media>
                                             </Media>
                                         )
@@ -223,7 +236,7 @@ const Index = props => {
                                                     </Badge>
                                                     </Media>
 
-                                                    <Badge style={{marginLeft: 80, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
+                                                    <Badge style={{marginLeft: 200, float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>@</small> {data.ToolGrp}</Badge>
 
                                                     <Badge color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>description: </small>{data.Desc}</Badge> 
                                                     
@@ -245,6 +258,12 @@ const Index = props => {
                                                     <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>consumption: </small> {data['QCons']}</Badge>
 
                                                     <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>category: </small> {data.Category}</Badge>
+
+                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>on-hand: </small> {data.OnHand}</Badge>
+
+                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>open-po: </small> {data.OpenPO}</Badge>
+
+                                                    <Badge style={{float:`right`}} color="light" pill ><small style={{fontWeight: 400, fontSize: 14, opacity: 0.5}}>in-transit: </small> {data.InTransit}</Badge>
                                                 </Media>
                                             </Media>
                                         )
