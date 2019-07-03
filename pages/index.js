@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
 import Layout from '../components/Layout';
+import ReactImageFallback from 'react-image-fallback';
 
-import { Container, Row, Col, Media, ListGroup, ListGroupItem, Badge, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon } from 'reactstrap';
+import { Container, Row, Col, Media, ListGroup, Spinner, ListGroupItem, Badge, FormGroup, Label, Input, Button, InputGroup, InputGroupAddon } from 'reactstrap';
 
 import fetch from 'isomorphic-unfetch';
 
@@ -50,7 +51,15 @@ const Index = props => {
         }
     }
 
-    console.log(props.data);
+    function makeid(length) {
+        let result           = '';
+        let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let charactersLength = characters.length;
+        for ( let i = 0; i < length; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+    }
 
     return (
         <Layout>
@@ -134,7 +143,22 @@ const Index = props => {
                                 {props.data.details.map(data => (
                                     <Media key={data.RANK} style={{borderLeft: `1px solid #00000020`, borderRight: `1px solid #00000020`, borderTop: `1px solid #00000020`, borderBottom: `1px solid #00000020`, padding: `20px`, marginBottom: 4 }}>
                                         <Media left href="#">
-                                            <Media style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}} object src={`http://dev-metaspf401.sunpowercorp.com:8080/images/spares/${data.ToolOwnerImage}`} alt="Generic placeholder image" />
+                                            {
+                                                data.ToolOwnerImage !== 'Blank.png' ?
+                                                <>
+                                                    <ReactImageFallback 
+                                                        style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}}
+                                                        src={`http://dev-metaspf401.sunpowercorp.com:8080/images/spares/${data.ToolOwnerImage}`}
+                                                        fallbackImage={`https://robohash.org/${makeid(9)}.png`}
+                                                        initialImage={<Spinner color="dark" />}
+                                                        alt="cool image should be here"
+                                                        className="my-image" 
+                                                    />
+                                                </> :
+                                                <>
+                                                    <Media style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}} object src={`https://robohash.org/${makeid(9)}.png`} alt="img" />
+                                                </>
+                                            }
                                         </Media>
                                         <Media body>
                                             <Media heading>
@@ -201,7 +225,21 @@ const Index = props => {
                                         return (
                                             <Media key={data.RANK} style={{borderLeft: `1px solid #00000020`, borderRight: `1px solid #00000020`, borderTop: `1px solid #00000020`, borderBottom: `1px solid #00000020`, padding: `20px`, marginBottom: 4 }}>
                                                 <Media left href="#">
-                                                    <Media style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}} object src={`http://dev-metaspf401.sunpowercorp.com:8080/images/spares/${data.ToolOwnerImage}`} alt="Generic placeholder image" />
+                                                    {
+                                                        data.ToolOwnerImage !== 'Blank.png' ?
+                                                        <>
+                                                            <ReactImageFallback 
+                                                                style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}}
+                                                                src={`http://dev-metaspf401.sunpowercorp.com:8080/images/spares/${data.ToolOwnerImage}`}
+                                                                fallbackImage={`https://robohash.org/${makeid(9)}.png`}
+                                                                initialImage={<Spinner color="dark" />}
+                                                                alt="img"
+                                                            />
+                                                        </> :
+                                                        <>
+                                                            <Media style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}} object src={`https://robohash.org/${makeid(4)}.png`} alt="img" />
+                                                        </>
+                                                    }
                                                 </Media>
                                                 <Media body>
                                                     <Media heading>
@@ -265,7 +303,23 @@ const Index = props => {
                                         return (
                                             <Media key={data.RANK} style={{borderLeft: `1px solid #00000020`, borderRight: `1px solid #00000020`, borderTop: `1px solid #00000020`, borderBottom: `1px solid #00000020`, padding: `20px`, marginBottom: 4 }}>
                                                 <Media left href="#">
-                                                    <Media style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}} object src={`http://dev-metaspf401.sunpowercorp.com:8080/images/spares/${data.ToolOwnerImage}`} alt="Generic placeholder image" />
+                                                    {
+                                                        data.ToolOwnerImage !== 'Blank.png' ?
+                                                        <>
+                                                            <ReactImageFallback 
+                                                                style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}}
+                                                                src={`http://dev-metaspf401.sunpowercorp.com:8080/images/spares/${data.ToolOwnerImage}`}
+                                                                fallbackImage={`https://robohash.org/${makeid(9)}.png`}
+                                                                initialImage={<Spinner color="dark" />}
+                                                                alt="cool image should be here"
+                                                                className="my-image" 
+                                                            />
+                                                        </> :
+                                                        <>
+                                                            <Media style={{width: 80, height: 80, borderRadius: `50%`, marginRight: 10}} object src={`https://robohash.org/${makeid(8)}.png`} alt="img" />
+                                                        </>
+                                                    }
+                                                    
                                                 </Media>
                                                 <Media body>
                                                     <Media heading>

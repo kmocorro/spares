@@ -11,7 +11,7 @@ const OEE = props => {
     // find unique process, ww, 
     const unique_process = ['All', ...new Set(props.data.oee.map(data => data.Process))];
     const unique_YR = [...new Set(props.data.oee.map(data => data.Year))];
-    const unique_WW = [...new Set(props.data.oee.map(data => data.WW))];
+    const unique_WW = [...new Set(props.data.oee.map(data => data.Week))];
 
     const filter = useFilter(null); 
 
@@ -29,7 +29,7 @@ const OEE = props => {
             onChange: handleOnChange
         }
     }
-
+    console.log(props);
     return (
         <Layout>
         <Container style={{overflow: `auto`}}>
@@ -103,10 +103,10 @@ const OEE = props => {
                                     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}></small>
                                     {data.Process} 
                                     <Badge id={data.Process} style={{float:`right`}} color="warning" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>speed loss: </small>
-                                        {data['%SpeedLoss']}
+                                        {data['SpeedLoss%']}
                                     </Badge>
                                     <Badge id={data.Process} style={{float:`right`}} color="info" pill>     <small style={{fontWeight: 400, fontSize: 14, opacity: 0.8}}>OEE: </small>
-                                        {data['']}
+                                        {data['OEE']}
                                     </Badge>
                                     </Media>
                                     <Media body>
