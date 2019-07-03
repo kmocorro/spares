@@ -50,7 +50,7 @@ const Index = props => {
         }
     }
 
-    //console.log(props.data);
+    console.log(props.data);
 
     return (
         <Layout>
